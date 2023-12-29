@@ -1,17 +1,19 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
+import * as React from "react";
+import * as styles from '../styles/home.module.css'; // Note the use of 'styles' as an object
 
+import Layout from "../components/layout";
 
-//react-component
-//alla componenter under /src/pages blir automatiskt sidor
-//sidans namn = namnet på javascript-filen (dock - index.js = sajtens första sida)
 const IndexPage = () => (
   <Layout>
-    <Link to="/portfolio">Se min portfolio</Link>
-  </Layout>
-)
-//denna konstant sätter titeln på sidan
-export const Head = () => <title>Home Page</title>
+    <section className={styles.head}>
+      <div>
+        {/* Your content here */}
+        This is my content here 
+      </div>
+    </section>
+  </Layout> 
+);
+
+export const Head = () => <title>Home Page</title>;
 
 export default IndexPage;

@@ -8,7 +8,9 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-
+require("dotenv").config({
+ path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Gatsby ITHS`,
@@ -16,7 +18,9 @@ module.exports = {
     author: `Håkan Gleissman`,
     siteUrl: `http://dummy-site.com`,
   },
+  
   plugins: [
+    
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,9 +28,11 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`, 
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -41,5 +47,12 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+       spaceId: `ehx48sa6mjjl`,
+        accessToken: `qm-6g_-Jkf28R0HV_svem1pn7YDCM101eLeVHGYVFWk`,
+      },
+    }, 
   ],
 }
