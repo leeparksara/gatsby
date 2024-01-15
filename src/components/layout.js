@@ -4,7 +4,6 @@ import * as React from "react"
 //import { Link } from "gatsby";
 import Navbar from "./Navbar";
 
-
 const Layout = ({ children }) => (
   <div className="layout">
     <Navbar />
@@ -14,11 +13,6 @@ const Layout = ({ children }) => (
      <footer> <p>Copyright 2023 sara</p> </footer>
   </div>
   
-
-
-
-
-
 
   /*
     <>
