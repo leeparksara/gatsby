@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-
+import * as styles from "../styles/style.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/layout";
 // index page will display navbar, hero section and footer
