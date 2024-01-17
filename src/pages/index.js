@@ -1,15 +1,16 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../styles/style.css";
+
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Layout from "../components/layout";
-
+// index page will display navbar, hero section and footer
+// the data retrieved from graphql and contentful
 const IndexPage = ({ data }) => {
   const { title, heroText, heroImage,heading } = data.allContentfulHomePage.edges[0].node;
   const parsedHeading = documentToReactComponents(JSON.parse(heading.raw));
   return (
-    <Layout>
+    <Layout >
       <section className="hero-section">
         <div className="hero-flex">
         <div>

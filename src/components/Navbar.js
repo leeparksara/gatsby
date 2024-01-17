@@ -1,27 +1,9 @@
-/*import React from 'react'
-import { Link } from 'gatsby'
-
-const Navbar = () => {
-  return (
-      <nav>
-          <h2>Saras's portfolio</h2>
-          <div className='links'>
-              <Link to='/'>Home</Link>
-              <Link to='/about'>About</Link>
-              <Link to='/portfolio'>Portfolio Projects</Link>
-          </div>
-
-  </nav>
-  )
-}
-
-export default Navbar */
-
-
 
 import React from 'react';
+import logoImage from '../images/Group 41.png'
 import { Link, graphql, useStaticQuery } from 'gatsby';
 const Navbar = () => {
+  // navbar component using a static query
   const data = useStaticQuery(graphql`
     query {
       allContentfulNavbarMenu(sort: { order: ASC }) {
@@ -36,8 +18,8 @@ const Navbar = () => {
   const menuItems = data.allContentfulNavbarMenu.nodes;
 
   return (
-    <nav>
-      <h2>Sara's Portfolio</h2>
+    <nav >
+      <img src={logoImage}/>
       <div className='links'>
         
         {menuItems.map(item => (
@@ -45,6 +27,8 @@ const Navbar = () => {
         ))}
        
       </div>
+     
+     
     </nav>
   );
 };

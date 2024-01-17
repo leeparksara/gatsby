@@ -1,15 +1,18 @@
-// contact-us-template.js
+
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+// contact us component 
+// Contact Us has only two entries
+
 const ContactUsTemplate = ({ data }) => {
-  const contactData = data.allContentfulContactUs.nodes[0]; // Assuming you have only one Contact Us entry
+  const contactData = data.allContentfulContactUs.nodes[0]; 
 
   return (
     <Layout>
  
    
-    <div>
+    <div className='form-wrapp'>
       <h1>{contactData.title}</h1>
 <div>
   <form>
@@ -25,9 +28,14 @@ const ContactUsTemplate = ({ data }) => {
   <input className='btn' type='submit' />
   </form>
 </div>
-      <p>Email: {contactData.email}</p>
-      <p>Number: {contactData.number}</p>
+ 
+
     </div>
+    <div>
+<p>Email: {contactData.email}</p>
+      <p>Number: {contactData.number}</p>
+
+</div>
     </Layout>
   );
 };

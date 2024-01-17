@@ -5,8 +5,10 @@ import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from "../components/layout"
 
-//sidans namn blir portfolio efter namnet på javascript-filen
-const SecondPage = () => {
+//The component that renders all the projects that I have done
+const Projects = () => {
+  // Retrieving the data for the portfolio 
+  // Each project has a title, description and image
   const data = useStaticQuery(graphql`query{
      allContentfulPortfolio {
     edges {
@@ -26,7 +28,7 @@ const SecondPage = () => {
   }`)
   return (
     <Layout>
-    <div>
+    <div className="project-wrapper">
       <ul className="posts">
         {data.allContentfulPortfolio.edges.map(edge => (
           <li className="post" key={edge.node.id}>
@@ -34,7 +36,8 @@ const SecondPage = () => {
           <div className="project-text">
             <h2>{edge.node.title}</h2>
             <p className="excerpt">{edge.node.descriptions.descriptions}</p>
-            <Link to={`/portfolio/${edge.node.slug}`}>Read more</Link>
+            {/* A link to each project that takes the user for an individual project page  */}
+            <Link className="link"  to={'../templates/portfolio-item.js'}>Read more</Link>
             </div>
             <GatsbyImage 
             className="img"
@@ -49,7 +52,7 @@ const SecondPage = () => {
       </ul>
 
       </div>
-      <Link to="/">Go back to the homepage</Link>
+
     </Layout>
 
   );
@@ -58,4 +61,4 @@ const SecondPage = () => {
 
 export const Head = () => <title>Portfolio Page</title>
 
-export default SecondPage
+export default Projects

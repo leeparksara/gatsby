@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+// About us has three entries, renders a title, a text and an image
 const AboutUsPage = ({ data }) => {
   const {  aboutText, aboutImage,heading } = data.allContentfulAboutUs.edges[0].node;
 const parsedHeading = documentToReactComponents(JSON.parse(heading.raw))

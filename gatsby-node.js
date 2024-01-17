@@ -1,33 +1,4 @@
-/*
-const path = require ('path');
 
-exports.createPages = async ({graphql, actions}) =>{
-    const {createPages} = actions;
-
-    const response = await graphql(`
-    allContentfulPortfolio {
-        edges {
-          node {
-         slug
-          
-            
-          }
-        }
-      }
-      }
-    `);
-
-
-    response.data.allContentfulPortfolio.edges.forEach((edge)=>{
-        createPages ({
-            path: `/portfolio/${edge.node.slug}`,
-            component: path.resolve('./src/templates/portfolio-items.js'),
-            context:{
-                slug: edge.node.slug,
-            },
-        });
-    });
-}; */
 const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
