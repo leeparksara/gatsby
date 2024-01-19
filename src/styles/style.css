@@ -29,7 +29,7 @@ p{
 
 nav{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr  10fr;
     color:#fff;
     width: 100%;
    align-items: center;
@@ -316,9 +316,10 @@ margin-bottom: 280px;
             overflow: auto;
           }
         nav {
-          grid-template-columns: 1fr; 
+
+          grid-template-columns: 1.5fr  10fr;
         }
-      
+       
         .hero-flex {
           flex-direction: column; 
           column-gap: 0;

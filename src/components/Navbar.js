@@ -19,7 +19,8 @@ const Navbar = () => {
 
   return (
     <nav >
-      <img src={logoImage}/>
+            <Link  to="/"><img src={logoImage}/> </Link>
+      
       <div className='links'>
         
         {menuItems.map(item => (
