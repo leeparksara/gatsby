@@ -36,7 +36,7 @@ const Projects = () => {
           <div className="project-text">
             <h2>{edge.node.title}</h2>
             <p className="excerpt">{edge.node.descriptions.descriptions}</p>
-            {/* A link to each project that takes the user for an individual project page              <Link className="link"  to={'../templates/portfolio-item.js'}>Read more</Link> */}
+            {/* A link to each project that takes the user for an individual project page  */}
             <Link className="link" to={`/portfolio/${edge.node.slug}`}>Read more</Link>
 
 
@@ -46,7 +46,7 @@ const Projects = () => {
               alt={edge.node.title}
               image={edge.node.images.gatsbyImage}
             />
-            {/* Link to the individual portfolio item */}
+
          
             </div>
           </li>

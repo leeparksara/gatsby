@@ -1,6 +1,6 @@
 
 const path = require('path');
-
+// Fetching the data from the portfolio content type and creating page for each project 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
