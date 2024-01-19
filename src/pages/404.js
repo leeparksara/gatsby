@@ -2,7 +2,7 @@ import  React,{ useState } from "react"
 import { graphql,Link  } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
+import * as styles from "../styles/style.css";
 
 // Error page thats displays when something goes wrong in the website
 
