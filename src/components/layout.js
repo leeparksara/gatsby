@@ -1,5 +1,6 @@
 import * as React from "react";
 import Navbar from "./Navbar";
+import * as styles from "../styles/style.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 // The layout that will appear on every page navbar, footer
 const Layout = ({ children }) => (
@@ -10,6 +11,9 @@ const Layout = ({ children }) => (
       {children}
     </div>
     <footer>
+    <div className="footer-wrapper">
+
+  
     <div className="contact-info">
     <p> 
     Email: Sara900@gmail.com
@@ -32,7 +36,10 @@ const Layout = ({ children }) => (
        <FaLinkedin className="icon"/>
       </a>
     </div>
+    </div>
     </footer>
+   
+    
   </div>
 );
 

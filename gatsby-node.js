@@ -5,17 +5,19 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    query {
-      allContentfulPortfolio {
-        nodes {
-          title
-          slug
-        }
+  query {
+    allContentfulPortfolio {
+      nodes {
+        title
+        slug
       }
     }
-  `);
+  }
+`);
+
 
   const portfolios = result.data.allContentfulPortfolio.nodes;
+
 
   portfolios.forEach(portfolio => {
     createPage({
@@ -26,4 +28,4 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
-};
+}

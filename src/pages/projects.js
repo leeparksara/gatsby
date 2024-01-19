@@ -8,23 +8,23 @@ import Layout from "../components/layout"
 //The component that renders all the projects that I have done
 const Projects = () => {
   // Retrieving the data for the portfolio 
-  // Each project has a title, description and image
+  // Each project has a title, description , image and slug to redirect ti the individual project
   const data = useStaticQuery(graphql`query{
-     allContentfulPortfolio {
-    edges {
-      node {
-        title
-        descriptions{
-          descriptions
-        } 
-      
-        images{
-          gatsbyImage(width:400)
+    allContentfulPortfolio {
+      edges {
+        node {
+          title
+          slug
+          descriptions {
+            descriptions
+          }
+          images {
+            gatsbyImage(width: 400)
+          }
         }
-        
       }
     }
-  }
+    
   }`)
   return (
     <Layout>
@@ -36,8 +36,10 @@ const Projects = () => {
           <div className="project-text">
             <h2>{edge.node.title}</h2>
             <p className="excerpt">{edge.node.descriptions.descriptions}</p>
-            {/* A link to each project that takes the user for an individual project page  */}
-            <Link className="link"  to={'../templates/portfolio-item.js'}>Read more</Link>
+            {/* A link to each project that takes the user for an individual project page              <Link className="link"  to={'../templates/portfolio-item.js'}>Read more</Link> */}
+            <Link className="link" to={`/portfolio/${edge.node.slug}`}>Read more</Link>
+
+
             </div>
             <GatsbyImage 
             className="img"

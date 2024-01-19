@@ -6,9 +6,6 @@
     padding: 0;
     text-decoration: none;
 }
-
- 
-
   
     html, body {
         min-height: 100%;
@@ -56,22 +53,7 @@ nav .links{
      border-bottom: 3px solid transparent;
      font-family:  sans-serif;
 }
-footer{
-    background-color:   #bcbcbc;
-    width: 100%;
-    margin-top: 0;
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   height:93px;
 
-}
-.contact-info{
-    display: flex;
-    flex-direction: column;
-    font-family:  sans-serif;
-    color: #212122;
-}
 footer p{
    
     color: #212122;
@@ -123,6 +105,32 @@ footer p{
     width: 500px;
 }
 
+footer{
+    background-color:   #bcbcbc;
+    width: 100%;
+    margin-top: 0;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height:auto;
+
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    font-family:  sans-serif;
+    color: #212122;
+}
+.footer-wrapper{
+    height: 120px;
+    display: flex;
+   justify-content: space-around;
+   width: 100%;
+   align-items: center;
+   }
+
+   
 .about-section{
     display: flex;
     column-gap: 30px;
@@ -143,12 +151,9 @@ ul{
     list-style: none;
 }
 .project-section{
-
     display: flex;
     column-gap: 50px;
     margin-top: 50px;
-  
-
 }
 .img{
     margin-bottom: 50px;
@@ -252,6 +257,8 @@ border: none;
        justify-content: center;
        align-items: center;
        margin-top: 10%;
+      
+      
       }
       .error-text{
         display: flex;
@@ -277,7 +284,7 @@ border: none;
         color: #fff;
         padding: 7px;
 border-radius: 50px;
-
+margin-bottom: 280px;
       }
       .result-item{
         color: #c6d6f7;
@@ -393,7 +400,6 @@ border-radius: 50px;
 
     }
     form{
-  
            padding: 0;
            padding-bottom: 20px;
            width: 400px;
@@ -403,6 +409,7 @@ border-radius: 50px;
         display: flex;
    flex-direction: column-reverse;
      height: 100%;
+     
     
       
       }
@@ -411,7 +418,15 @@ border-radius: 50px;
       
       }
       footer {
-        height: auto; /* Adjust the height to auto for smaller screens */
+        background-color:   #bcbcbc;
+        width: 100%;
+        margin-top: 0;
+       display: flex;
+     flex-direction: column;
+     
+       align-items: center;
+       height: auto;
+      
     }
     .project{
         display: flex;
@@ -430,5 +445,19 @@ border-radius: 50px;
     .hero-section{
         margin-bottom: 100px;
     }
+   
+   .footer-wrapper{
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+  
+   }
+   .social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+   }
       }
-      
+     
+     
