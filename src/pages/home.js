@@ -35,7 +35,7 @@ export const query = graphql`
             raw
           }
           heroImage {
-            gatsbyImageData(width: 700)
+            gatsbyImageData(width: 600)
           }
           heroText
         }
